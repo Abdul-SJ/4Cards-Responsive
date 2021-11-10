@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 3rem;
+}
+.text{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.text h2{
+    font-size: 2.2rem;
+    color: hsl(234, 12%, 34%);
+    letter-spacing: 1px;
+}
+.text h2:nth-child(1){
+    font-weight: 300;
+}
+.text h2:nth-child(2){
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.text p{
+    letter-spacing: 0.5px;
+    color: hsl(229, 6%, 66%);
+    max-width: 36rem;               /* no need of padding use max-width instead */
+}
+
+
+.cards-sec{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.card{
+    background-color: #fff;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 2rem;
+    /* width: 400px; */
+    text-align: right;
+    cursor: pointer;
+}
+.card-text{
+    text-align: left;
+    letter-spacing: 0.4px;
+}
+.card h3{
+    color: hsl(234, 12%, 34%);
+    margin-bottom: 1rem;
+    align-items: flex-start;
+    font-size: 1.5rem;
+}
+.card p{
+    color: hsl(229, 6%, 66%);
+    margin-bottom: 2rem;
+    padding: 0 0rem 0 0;
+}
+/* .card img{
+    width: 70px;
+} */
+.card1{
+    border-top: 5px solid hsl(180, 62%, 55%);
+}
+.card2{
+    border-top: 5px solid hsl(0, 78%, 62%);
+}
+.card3{
+    border-top: 5px solid hsl(34, 97%, 64%);
+}
+.card4{
+    border-top: 5px solid hsl(212, 86%, 64%);
+}
+
+.card1,
+.card4{
+    align-self: center;
+}
+
+.box-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+
+/* .attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); } */
+
+@media only screen and (max-width:375px) {
+    .cards-sec{
+        grid-template-columns: 1fr;
+    }
+    .text h2{
+        font-size: 1.2rem;
+    }
+    .text p,
+    .card p{
+        font-size: 0.8rem;
+    }
+    .container{
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    .card h3{
+        font-size: 1.2rem;
+    }
+    .text{
+        margin-bottom: 3rem;
+    }
+}
+@media only screen and (max-width:768px) {
+    .cards-sec{
+        grid-template-columns: 1fr;
+    }
+}
